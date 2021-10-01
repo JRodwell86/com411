@@ -8,4 +8,4 @@ Weight =int(input("How much do you weigh (in kilograms)?"))
 answer = Weight / Height **2
 bmi = str(round(answer, 2))
 print(f"{name} you are {age} years old and your bmi is {bmi}")
-print(f"ham")
+

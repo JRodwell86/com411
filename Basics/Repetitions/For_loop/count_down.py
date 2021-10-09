@@ -7,3 +7,4 @@ for count in range(steps,0,-1):
     steps = steps - 1
 print("")
 print("We have reached the cave!")
+

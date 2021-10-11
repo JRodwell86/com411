@@ -1,10 +1,10 @@
+#input rows and columns
 rows = int(input("How many rows should I have?"))
 columns = int(input("How many columns should I have?"))
-row_number = 0
-column_number = 0
-for column_number in range(columns):
-    print(f":-)" * column_number, end="")
-    for row_number in range(rows):
-        print(f":-)")
+#print smiley
+for row in range(0,rows,1):
+    for column in range(0,columns,1):
+        print(":-)", end="")
+    print("")
 
 

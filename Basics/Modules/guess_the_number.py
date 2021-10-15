@@ -26,4 +26,5 @@ def play_guess_the_number():
     if guess == number:
         print("Congratulations! You guessed my number!")
 
+
 play_guess_the_number()

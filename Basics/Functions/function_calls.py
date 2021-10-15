@@ -42,6 +42,6 @@ def repeat(word):
     number = int(input())
     print(word * number)
 
-
+# call to function
 input_word()
 

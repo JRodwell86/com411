@@ -1,13 +1,14 @@
-def display_ladder(steps):
-
-    print(f"|   |\n" 
-           "*****\n"
-           "|   |\n" * steps)
-
 def create_ladder():
     print("How many steps remain?")
-    steps = int(input())
-    display_ladder(steps)
+    rung = int(input())
+    return rung
+
+def draw_ladder():
+    for step in range(steps):
+        print("|    |")
+        print(" ****")
+    print("|    |")
 
 
-create_ladder()
+steps = int(create_ladder())
+draw_ladder()

@@ -1,4 +1,4 @@
-def input_word():
+def run():
     print("Please enter a word")
     word = input()
     print("Please select an option one-five")
@@ -43,5 +43,5 @@ def repeat(word):
     print(word * number)
 
 # call to function
-input_word()
+run()
 

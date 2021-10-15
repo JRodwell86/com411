@@ -1,5 +1,5 @@
 # Display a box
-def run()
+def run():
     print("""##########
 #  #  #  #
 #        #

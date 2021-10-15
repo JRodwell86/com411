@@ -1,24 +1,29 @@
-from random import randrange
+def play_guess_the_number():
 
-print("Please enter the minimum value")
-mini = int(input())
+    from random import randrange
 
-print("Please enter the maximum value")
-maxi = int(input())
+    print("Please enter the minimum value")
+    min_value = int(input())
 
-range = (randrange(mini, maxi, 1))
+    print("Please enter the maximum value")
+    max_value = int(input())
 
+    number = (randrange(min_value, max_value, 1))
 
-print(f"I am thinking of a number between {mini} and {maxi}. Can you guess what it is?")
-guess = int(input())
+    print(f"I am thinking of a number between {min_value} and {max_value}. Can you guess what it is?")
+    guess = int(input())
 
-while guess < range:
-    print("Your guess is too low")
-    print("Try again")
+    while guess < number:
+        print("Your guess is too low")
+        print("Try again")
+        guess = int(input())
 
-while guess > range:
-    print("Your guess is too high")
-    print("Try again")
+    while guess > number:
+        print("Your guess is too high")
+        print("Try again")
+        guess = int(input())
 
-while guess == range:
-    print("You did it!")
+    if guess == number:
+        print("Congratulations! You guessed my number!")
+
+play_guess_the_number()

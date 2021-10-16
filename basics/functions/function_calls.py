@@ -43,5 +43,5 @@ def repeat(word):
     print(word * number)
 
 # call to function
-run()
+#run()
 

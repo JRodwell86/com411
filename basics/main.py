@@ -113,7 +113,7 @@ def run_block_a():
     elif simple_functions == "simple_functions":
         simple_functions.run()
     elif guess_the_number == "guess_the_number":
-        guess_the_number.run()
+        guess_the_number.play_guess_the_number()
 
 
 

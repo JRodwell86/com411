@@ -5,7 +5,7 @@ def read (file_path):
         csv_reader = csv.reader(file)
         headings = next(csv_reader)
         print(f"Headings:\n{headings}")
-        print("Values")
+        print("Values:")
         for line in csv_reader:
             print(line)
 

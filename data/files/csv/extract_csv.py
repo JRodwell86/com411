@@ -8,7 +8,7 @@ def extract (file_path):
         csv_reader = csv.reader(file)
 
         next(csv_reader)
-
+        #blank string variable that you can put things in
         names = ""
 
         for data in csv_reader:

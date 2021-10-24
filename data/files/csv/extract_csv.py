@@ -6,7 +6,7 @@ def extract (file_path):
 
     with open(file_path) as file:
         csv_reader = csv.reader(file)
-
+        #this line ignores the headers
         next(csv_reader)
         #blank string variable that you can put things in
         names = ""

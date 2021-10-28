@@ -15,3 +15,10 @@ def run():
 
 if __name__ == "__main__":
     run()
+
+#how to do the above with a for loop
+#def run():
+ # print("Moving...")
+  #path = movements()
+  #for index in range(0, len(path), 2):
+   # print(f"{path[index]} for {path[index+1]} steps")

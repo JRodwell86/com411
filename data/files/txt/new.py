@@ -22,4 +22,4 @@ def display_text(file_path):
     print(data)
 
 
-display_text("library.txt")
+display_line("library.txt")

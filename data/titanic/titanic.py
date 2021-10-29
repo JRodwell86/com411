@@ -31,14 +31,16 @@ def display_passenger_names():
         print(passenger_name)
 
 def display_num_survivors():
+#variable to make the count for the num_survived
+    num_survived = 0
+#for loop to go through all the records.
     for record in records:
-        num_survived = (record[1])
-        print(num_survived)
-
-    #for index[1] in range(len(records)):
-        #if index == 1:
-            #num_survived = num_survived + 1
-            #print(len(num_survived))
+# int to make it a number. square brackets to show the position.
+        survival_status = int(record[1])
+        if survival_status == 1:
+# adds the number to the variable that I have put
+            num_survived += 1
+    print(f"{num_survived} passengers survived.")
 
 
 

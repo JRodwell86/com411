@@ -58,61 +58,61 @@ def run_block_a():
         ascii_robot.run()
     elif response == "user_input":
         user_input.run()
-    elif characters == "characters":
+    elif response == "characters":
         characters.run()
-    elif count_down == "count_down":
+    elif response == "count_down":
         count_down.run()
-    elif count_letters == "count_letters":
+    elif response == "count_letters":
         count_letters.run()
-    elif membership_operators == "membership_operators":
+    elif response == "membership_operators":
         membership_operators.run()
-    elif brightness_range == "brightness_range":
+    elif response == "brightness_range":
         brightness_range.run()
-    elif reverse == "reverse":
+    elif response == "reverse":
         reverse.run()
-    elif for_simple == "for_simple":
+    elif response == "for_simple":
         for_simple.run()
-    elif nested == "nested":
+    elif response == "nested":
         nested.run()
-    elif nesting == "nesting":
+    elif response == "nesting":
         nesting.run()
-    elif while_ascii == "while_ascii":
+    elif response == "while_ascii":
         while_ascii.run()
-    elif count == "count":
+    elif response == "count":
         count.run()
-    elif factorial == "factorial":
+    elif response == "factorial":
         factorial.run()
-    elif len == "len":
+    elif response == "len":
         len.run()
-    elif while_simple == "while_simple":
+    elif response == "while_simple":
         while_simple.run()
-    elif sum_100 == "sum_100":
+    elif response == "sum_100":
         sum_100.run()
-    elif sumnum == "sumnum":
+    elif response == "sumnum":
         sumnum.run()
-    elif sum_user == "sum_user":
+    elif response == "sum_user":
         sum_user.run()
-    elif ascii_character == "ascii_character":
+    elif response == "ascii_character":
         ascii_character.run()
-    elif ascii_code == "ascii_code":
+    elif response == "ascii_code":
         ascii_code.run()
-    elif function_calls == "function_calls":
+    elif response == "function_calls":
         function_calls.run()
-    elif function_with_loop == "function_with_loop":
+    elif response == "function_with_loop":
         function_with_loop.run()
-    elif function_with_nesting == "function_with_nesting":
+    elif response == "function_with_nesting":
         function_with_nesting.run()
-    elif function_with_parameter == "function_with_parameter":
+    elif response == "function_with_parameter":
         function_with_parameter.run()
-    elif multiple_functions == "multiple_functions":
+    elif response == "multiple_functions":
         multiple_functions.run()
-    elif multiple_parameters == "multiple_parameters":
+    elif response == "multiple_parameters":
         multiple_parameters.run()
-    elif return_values == "return_values":
+    elif response == "return_values":
         return_values.run()
-    elif simple_functions == "simple_functions":
+    elif response == "simple_functions":
         simple_functions.run()
-    elif guess_the_number == "guess_the_number":
+    elif response == "guess_the_number":
         guess_the_number.play_guess_the_number()
 
 
@@ -132,6 +132,5 @@ def run():
             break
         else:
             print("Invalid option! Please try again.")
-
 
 run()

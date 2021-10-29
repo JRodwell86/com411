@@ -48,13 +48,30 @@ def display_passengers_per_gender():
 
     for record in records:
         gender = (record[4])
-        if gender == "male":
+# the .lower means that it reads the variable as lower case whether it is or not.
+        if gender.lower() == "male":
             males += 1
         else:
             females += 1
     print(f"Females: {females} Males: {males}")
 
+def display_passengers_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
 
+    for record in records:
+#code to ignore any blank strings in the lists
+        if record[5] != "":
+#float converts number in a string to an integer cos is from list
+            age = float(record[5])
+            if age < 18:
+                children += 1
+            elif age >= 65:
+                 elderly += 1
+            else:
+                adults += 1
+    print(f"Children:{children}, Adults:{adults}, Elderly:{elderly}")
 
 def run():
     load_data("titanic.csv")
@@ -67,6 +84,9 @@ def run():
         display_num_survivors()
     elif selected_option == 3:
         display_passengers_per_gender()
+    elif selected_option == 4:
+        display_passengers_per_age_group()
+
     else:
         print("Error! Option not recognised")
 

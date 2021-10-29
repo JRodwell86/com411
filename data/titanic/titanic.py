@@ -4,6 +4,8 @@ records = []
 headings = []
 
 def load_data(file_path):
+    #adding global and variable name means that the variable i do below 'headings' goes to the global one
+    global headings
     print("Loading data...", end="")
     with open(file_path) as file:
         csv_reader = csv.reader(file)
@@ -28,6 +30,17 @@ def display_passenger_names():
         passenger_name = (record[3])
         print(passenger_name)
 
+def display_num_survivors():
+    for record in records:
+        num_survived = (record[1])
+        print(num_survived)
+
+    #for index[1] in range(len(records)):
+        #if index == 1:
+            #num_survived = num_survived + 1
+            #print(len(num_survived))
+
+
 
 def run():
     load_data("titanic.csv")
@@ -36,8 +49,11 @@ def run():
     print(f"You have selected option: {selected_option}")
     if selected_option == 1:
         display_passenger_names()
+    elif selected_option == 2:
+        display_num_survivors()
     else:
         print("Error! Option not recognised")
+
 
 if __name__ == "__main__":
   run()

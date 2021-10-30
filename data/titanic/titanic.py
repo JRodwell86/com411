@@ -3,6 +3,7 @@ import csv
 records = []
 headings = []
 
+
 def load_data(file_path):
     #adding global and variable name means that the variable i do below 'headings' goes to the global one
     global headings
@@ -76,26 +77,11 @@ def display_passengers_per_age_group():
 
 
 def display_survivors_per_age_group():
-
     for record in records:
-
         if int(record[1]) == 1:
             survivors = record
+            print(survivors)
 
-            children = 0
-            adults = 0
-            elderly = 0
-
-            for survivor in survivors:
-                if survivor[5] != "":
-                    age = float(survivor[5])
-                    if age < 18:
-                        children += 1
-                    elif age >= 65:
-                        elderly += 1
-                    else:
-                        adults += 1
-            print(children)
 
 def run():
     load_data("titanic.csv")

@@ -2,7 +2,7 @@
 import csv
 records = []
 headings = []
-
+survivors = []
 
 def load_data(file_path):
     #adding global and variable name means that the variable i do below 'headings' goes to the global one
@@ -65,22 +65,54 @@ def display_passengers_per_age_group():
     for record in records:
 #code to ignore any blank strings in the lists
         if record[5] != "":
+
 #float converts number in a string to an integer cos is from list
-            age = float(record[5])
-            if age < 18:
-                children += 1
-            elif age >= 65:
+                age = float(record[5])
+                if age < 18:
+                  children += 1
+                elif age >= 65:
                  elderly += 1
-            else:
-                adults += 1
+                else:
+                    adults += 1
     print(f"Children:{children}, Adults:{adults}, Elderly:{elderly}")
 
 
 def display_survivors_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
+    suvchildren = 0
+    suvadults = 0
+    suvelderly = 0
+
     for record in records:
-        if int(record[1]) == 1:
-            survivors = record
-            print(survivors)
+        # code to ignore any blank strings in the lists
+        if record[5] != "":
+
+            # float converts number in a string to an integer cos is from list
+            age = float(record[5])
+            if age < 18:
+                children += 1
+            elif age >= 65:
+                elderly += 1
+            else:
+                adults += 1
+
+    for record in records:
+        # code to ignore any blank strings in the lists
+        if record[5] != "":
+            if int(record[1]) == 1:
+                # float converts number in a string to an integer cos is from list
+                age = float(record[5])
+                if age < 18:
+                    suvchildren += 1
+                elif age >= 65:
+                    suvelderly += 1
+                else:
+                    suvadults += 1
+
+    print(f"Children:{suvchildren}/{children}, Adults:{suvadults}/{adults}, Elderly:{suvelderly}/{elderly}")
+
 
 
 def run():

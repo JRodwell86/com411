@@ -15,11 +15,13 @@ def display_keys(data):
 
 def display_values(data):
     print("\nValues:")
+    #adding .values() returns the values
     for value in data.values():
         print(value)
 
 def display_items(data):
     print("\nPairs:")
+    #adding.items() means it returns the pairs
     for key, value in data.items():
         print(f"{key}, {value}")
 

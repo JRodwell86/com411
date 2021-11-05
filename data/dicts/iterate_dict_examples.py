@@ -7,3 +7,12 @@ for value in wedding.values():
 
 for key, value in wedding.items():
     print(f"{key}: {value}")
+
+
+wedding = {
+    "items":{"Cake":1, "Car":1, "Ribbons":100},
+    "people":{"guests":30}
+}
+
+for key, value in wedding.items():
+    print(f"{key}: {value}")

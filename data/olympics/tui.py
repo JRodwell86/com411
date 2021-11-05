@@ -1,35 +1,46 @@
-#default value of the parameter is an empty string
+LINE_WIDTH = 85
+
+
 def started(msg=""):
-    print("-" * 85)
-    print(f"Operation started: Reading data from {msg}...\n")
+    output = f"Operation started: {msg}..."
+    dashes = "-" * LINE_WIDTH
+    print(f"{dashes}\n{output}\n")
+
 
 def completed():
-    print("Operation completed")
-    print("-" * 85)
+    dashes = "-" * LINE_WIDTH
+    print(f"\nOperation completed.\n{dashes}\n")
+
 
 def error(msg):
-    print(f"Error! {msg}!")
+    print(f"Error! {msg}\n")
+
 
 def menu():
-    print("""Please select one of the following options:
-    [years] List unique years
-    [tally] Tally up medals
-    [ctally] Tally up medals for each team
-    [exit] Exit the program""")
-    print("Your selection:")
-    msg = input()
-    return msg
+    print(f"""Please select one of the following options:
+    {"[years]":<10} List unique years
+    {"[tally]":<10} Tally up medals
+    {"[team]":<10} Tally up medals for each team
+    {"[exit]":<10} Exit the program
+    """)
+    selection = input("Your selection: ")
+    return selection.strip().lower()
+
 
 def display_medal_tally(tally):
-    print(f"| Gold | {tally['Gold']}")
+    print(f"| {'Gold':<10} | {tally['Gold']:<10} |")
+    print(f"| {'Silver':<10} | {tally['Silver']:<10} |")
+    print(f"| {'Bronze':<10} | {tally['Bronze']:<10} |")
 
-def run():
 
-    started()
-    completed()
-    error("hi")
-    menu()
-    display_medal_tally({"Gold": 10, "Silver": 5, "Bronze": 2})
+def display_team_medal_tally(team_tally):
+    for team, tally in team_tally.items():
+        print(team)
+        print(f"\tGold:{tally['Gold']}, Silver:{tally['Silver']}, Bronze:{tally['Bronze']}")
 
-if __name__ == "__main__":
-  run()
+
+def display_years(years):
+#the sorted bit orders the output in to reverse order. (normal order - sorted(years)
+    sorted_years = sorted(years, reverse=True)
+    for year in sorted_years:
+        print(year)

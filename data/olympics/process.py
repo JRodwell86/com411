@@ -21,15 +21,23 @@ def list_years(data):
 #calls a function to print off an end portion of the display
     tui.completed()
 
-
+#data is athelete_events and added in the main
 def tally_medals(data):
+#calling the function and entering the parameter if this one is chose
     tui.started("Tallying medals")
+#creating a list of 0 for each tally so it can then be counted up
     medal_tally = {"Gold": 0, "Silver": 0, "Bronze": 0}
+#for new variable in athelete_events
     for record in data:
+##variable is the data[column in data]
         medal = record[COL_MEDAL]
+#if the medal (identified line by line in data above) is one of the below
         if medal in ("Gold", "Silver", "Bronze"):
+#then add 1 to the tally of the specific area
             medal_tally[medal] += 1
+#adds the list as a parameter to the function
     tui.display_medal_tally(medal_tally)
+#calls a function to print off an end portion of the display
     tui.completed()
 
 

@@ -33,6 +33,8 @@ def run():
             process.tally_medals(athlete_data)
         elif selection == "team":
             process.tally_team_medals(athlete_data)
+        elif selection == "by years":
+            process.record_by_year(athlete_data)
         elif selection == "exit":
 #break ends the loop so it stops working through.
             break

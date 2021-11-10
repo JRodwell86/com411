@@ -6,7 +6,7 @@ COL_YEAR = 9
 
 #data is athelete_events and added in the main
 def list_years(data):
-#function and parameter for the start of the file - puts in the thing
+    #function and parameter for the start of the file - puts in the thing
     tui.started("Listing years")
 #empty set
     years = set()
@@ -66,4 +66,14 @@ def tally_team_medals(data):
     # adds the list as a parameter to the function
     tui.display_team_medal_tally(medal_tally)
     # calls a function to print off an end portion of the display
+    tui.completed()
+
+def record_by_year(data):
+
+    choice = input("choose year")
+    for record in data:
+        if record[COL_YEAR] == choice:
+            output = record
+
+            tui.display_record_by_years(output)
     tui.completed()

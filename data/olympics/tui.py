@@ -27,6 +27,7 @@ def menu():
     {"[years]":<10} List unique years
     {"[tally]":<10} Tally up medals
     {"[team]":<10} Tally up medals for each team
+    {"[by years]":<10} All the records for a year
     {"[exit]":<10} Exit the program
     """)
     selection = input("Your selection: ")
@@ -52,3 +53,7 @@ def display_years(years):
     sorted_years = sorted(years, reverse=True)
     for year in sorted_years:
         print(year)
+
+def display_record_by_years(output):
+    print(output)
+

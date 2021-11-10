@@ -114,17 +114,13 @@ def display_survivors_per_age_group():
 
     print(f"Children:{suvchildren}/{children}, Adults:{suvadults}/{adults}, Elderly:{suvelderly}/{elderly}")
 
+
 def passenger_onboard():
-    peep = []
-    passenger = str(input("Enter the name of a passenger"))
+    peep = input("enter a name")
     for record in records:
-        if passenger in record:
-            peep.append(record)
-            print(peep)
+        if peep in record[3]:
 
-
-
-
+            print(record)
 
 
 

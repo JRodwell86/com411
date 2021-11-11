@@ -116,12 +116,22 @@ def display_survivors_per_age_group():
 
 
 def passenger_onboard():
-    person = input("Enter an name")
+    #input a name
+    person = input("Enter a name")
+    #variable to count records checked
+    peep = 0
+
     for record in records:
+    #if the input is contained within the name column of the data (converted to lower case)
         if person in record[3].lower():
-
+    #print the returned records
             print(record)
-
+    #if the name is not  in the data
+        elif person not in record[3].lower():
+    #add to tally of checked recors
+            peep = peep + 1
+    #error message showing not in data and all records checked.
+    print(f"Error, name not recognised in {peep} records")
 
 
 def run():

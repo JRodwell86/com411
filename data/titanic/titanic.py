@@ -116,9 +116,9 @@ def display_survivors_per_age_group():
 
 
 def passenger_onboard():
-    peep = input("enter an id")
+    person = input("Enter an name")
     for record in records:
-        if peep in record[3].lower():
+        if person in record[3].lower():
 
             print(record)
 

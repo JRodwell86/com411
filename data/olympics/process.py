@@ -69,8 +69,9 @@ def tally_team_medals(data):
     tui.completed()
 
 def record_by_year(data):
-    tui.started("Results for each year")
-    choice = input("choose year")
+    choice = input("Please enter a year")
+    tui.started("Showing all results for selected year")
+
     for record in data:
         if record[COL_YEAR] == choice:
             output = record

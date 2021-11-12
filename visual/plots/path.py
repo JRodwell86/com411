@@ -32,7 +32,7 @@ def run():
     # variable created from second function
     values = path()
     # enters the lists to plot the graph. Red, circle, dashed line.
-    plt.plot(values[0], values[1], 'ro--')
+    plt.plot(values[0], values[1], 'r^--')
     # visualises the graph
     plt.show()
 

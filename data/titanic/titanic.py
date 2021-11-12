@@ -123,11 +123,11 @@ def passenger_onboard():
 
     for record in records:
     #if the input is contained within the name column of the data (converted to lower case)
-        if person in record[3].lower():
+        if person.lower() in record[3].lower():
     #print the returned records
             print(record)
     #if the name is not  in the data
-        elif person not in record[3].lower():
+        elif person.lower() not in record[3].lower():
     #add to tally of checked recors
             peep = peep + 1
     #error message showing not in data and all records checked.

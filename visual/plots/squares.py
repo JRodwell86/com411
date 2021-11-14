@@ -13,18 +13,16 @@ def small():
 def medium():
     y_values = [2, 5, 5, 2, 2]
     x_values = [2, 2, 5, 5, 2]
-    # making variable that contains square info. in '' is the colour, marker type & line type (green, square, dash
-    med = plt.plot(x_values, y_values, 'gs--')
-    # return variable to the function
-    return med
+    # don't need to create a variable as in the above as this is is the output of the function that is visualised with plt.show(). in '' is the colour, marker type & line type (green, square, dash
+    plt.plot(x_values, y_values, 'gs--')
+
 
 def large():
     y_values = [1, 6, 6, 1, 1]
     x_values = [1, 1, 6, 6, 1]
-    # making variable that contains square info. in '' is the colour, marker type & line type (blue, pentagon, solid line)
-    large = plt.plot(x_values, y_values, 'bp-')
-    # return variable to the function
-    return large
+    # in '' is the colour, marker type & line type (blue, pentagon, solid line)
+    plt.plot(x_values, y_values, 'bp-')
+
 
 
 

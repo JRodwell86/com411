@@ -21,13 +21,13 @@ def run():
     # call first function and assign data to variable
     data = read_data('temps.txt')
     # create a figure of 2 axes
-    fig, (ax1, ax2) = plt.subplots(1, 2)
+    fig, (axes) = plt.subplots(1, 2)
     # assign x & y variables
     x = range(len(data))
     y = data
     # create different axes from data
-    ax1.plot(x, y)
-    ax2.bar(x, y)
+    axes[0].plot(x, y)
+    axes[1].bar(x, y)
     # display the graphs
     plt.show()
 

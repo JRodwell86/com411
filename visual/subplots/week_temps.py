@@ -1,6 +1,6 @@
-# importing the visualisation
+# importing the visualisation stuff.
 import matplotlib.pyplot as plt
-# importing the csv
+
 import csv
 
 

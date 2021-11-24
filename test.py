@@ -1,8 +1,22 @@
-fruits = ["apple", "banana", "cherry"]
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
-for fruit in fruits:
-    print(fruit)
+line = None
 
-for index in range(len(fruits)):
-    fruit = fruits[index]
-    print(f"{fruit} is at index {index}.")
+def animate(frame):
+  global line
+  line.set_data(frame, frame)
+
+def run():
+  global line
+  fig, ax = plt.subplots()
+  ax.set_xlim(0, 10)
+  ax.set_ylim(0, 10)
+  line, = ax.plot([], [], 'ro')
+  simple_animation = animation.FuncAnimation( fig,
+                                              animate,
+                                              frames = 10,
+                                              interval = 1000)
+  plt.show()
+
+run()

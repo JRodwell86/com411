@@ -29,8 +29,10 @@ def animate(frame):
 
 def run():
     #referencing the global figure created above
-    global fig
-
+    global fig, ax
+    # code to set limit again - do again because clears each time it keeps it set.
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
     # code for animation - calls the fig, the animate function, 10 frame and an interval of 1 second
     some_animation = animation.FuncAnimation(fig, animate, frames= 10, interval= 1000)
     # code to show the subplot

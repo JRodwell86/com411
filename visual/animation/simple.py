@@ -3,11 +3,11 @@ import matplotlib.animation as animation
 # creating the figure and the subplot
 fig, ax = plt.subplots()
 
-def init():
-    global ax
+#def init():
+    #global ax
     # code to set the limits of the axis
-    ax.set_xlim(0, 10)
-    ax.set_ylim(0, 10)
+    #ax.set_xlim(0, 10)
+    #ax.set_ylim(0, 10)
 
 
 def animate(frame):
@@ -25,10 +25,13 @@ def animate(frame):
 
 def run():
     #referencing the global figure created above
-    global fig
+    global fig, ax
+    # code to set axis as init function doesn't work.
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
 
     # code for animation - calls the fig, the animate function, 10 frame and an interval of 1 second
-    some_animation = animation.FuncAnimation(fig, animate, frames= 10, interval= 1000, init_func=init)
+    some_animation = animation.FuncAnimation(fig, animate, frames= 10, interval= 1000)
     # code to show the subplot
     plt.show()
 

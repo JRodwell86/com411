@@ -17,7 +17,7 @@ def init():
 def animate(frame):
     global ax
     #code to plot the squares - load by frame and then access the dictionary frame by frame through [] and letter.
-    ax.plot(squares[frame]["x"], squares[frame]["y"], 'ro:')
+    ax.plot(squares[frame]["x"], squares[frame]["y"])
 
 
 

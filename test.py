@@ -1,22 +1,28 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import math
 
-line = None
+fig, ax = plt.subplots()
+
 
 def animate(frame):
-  global line
-  line.set_data(frame, frame)
+    global ax
+    ax.cla()
+    ax.set_xlim(0, 720)
+    ax.set_ylim(-1, 1)
+    x = range(0, 360)
+    y = [math.sin(math.radians(degrees) + (frame / 50)) for degrees in x]
+
+    ax.plot(x, y)
+
 
 def run():
-  global line
-  fig, ax = plt.subplots()
-  ax.set_xlim(0, 10)
-  ax.set_ylim(0, 10)
-  line, = ax.plot([], [], 'ro')
-  simple_animation = animation.FuncAnimation( fig,
-                                              animate,
-                                              frames = 10,
-                                              interval = 1000)
-  plt.show()
+    global line
+    sine_animation = animation.FuncAnimation(fig,
+                                             animate,
+                                             frames=720,
+                                             interval=100)
+    plt.show()
+
 
 run()

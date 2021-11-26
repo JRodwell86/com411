@@ -1,24 +1,34 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-
+# creating the figure and the subplot
 fig, ax = plt.subplots()
+
+def init():
+    global ax
+    # code to set the limits of the axis
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
 
 
 def animate(frame):
     global ax
-    # your code here (use ax to draw)
-    ax.set_xlim(0, 10)
-    ax.set_xlim(0, 10)
+
+    # code to set the limits of the axis
+    #ax.set_xlim(0, 10)
+    #ax.set_ylim(0, 10)
+    # setting x&y variables as the frame
     x = [frame]
     y = [frame]
+    #didn't need to do variables as counting frames, so could just put frame in. red circle marker.
     ax.plot(x[:frame], y[:frame], 'ro')
 
 
 def run():
+    #referencing the global figure created above
     global fig
-    # your code here (use fig with animation function)
+
     # code for animation - calls the fig, the animate function, 10 frame and an interval of 1 second
-    some_animation = animation.FuncAnimation(fig, animate, frames=10, interval=1000)
+    some_animation = animation.FuncAnimation(fig, animate, frames= 10, interval= 1000, init_func=init)
     # code to show the subplot
     plt.show()
 

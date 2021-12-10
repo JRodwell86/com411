@@ -20,6 +20,7 @@ class Dog:
     def go_to_toilet(self):
         if self.is_indoors:
             self.is_good_dog = False
+            # seperate from if statement about energy is added.
         self.energy += 5
 # code to create two separate dogs, with parameters
 first_dog = Dog("Fido", "Pert")
